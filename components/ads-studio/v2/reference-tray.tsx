@@ -85,12 +85,12 @@ const CATEGORY_COPY: Record<
     description:
       "Lock in your brand's palette, fonts, and voice so every ad feels on-brand.",
     newItemButton: "New Brand Kit",
-    heroImage: UNSPLASH_IMG("photo-1561070791-2526d30994b8"), // abstract color blobs
+    heroImage: UNSPLASH_IMG("photo-1611926653458-09294b3142bf"), // Pantone color card
     peerImages: [
-      UNSPLASH_IMG("photo-1550745165-9bc0b252726f", 120),
-      UNSPLASH_IMG("photo-1558591710-4b4a1ae0f04d", 120),
-      UNSPLASH_IMG("photo-1557264337-e8a93017fe92", 120),
-      UNSPLASH_IMG("photo-1579546929518-9e396f3cc809", 120),
+      UNSPLASH_IMG("photo-1626785774573-4b799315345d", 120), // paint swatches
+      UNSPLASH_IMG("photo-1586953208448-b95a79798f07", 120), // design work
+      UNSPLASH_IMG("photo-1558655146-9f40138edfeb", 120), // branding mockup
+      UNSPLASH_IMG("photo-1634986666676-ec8fd927c23d", 120), // design layout
     ],
   },
 };
