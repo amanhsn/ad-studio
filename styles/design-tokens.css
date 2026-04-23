@@ -1,0 +1,458 @@
+/*
+ * ImagineArt Design System — CSS Custom Properties
+ * Generated from Figma: ImagineArt Design System V3
+ *
+ * Usage: Import this file in your root CSS/layout.
+ * Semantic tokens automatically switch between light/dark via the .dark class.
+ */
+
+/* ─── Primitive Colors ─── */
+:root {
+  /* Primary (Purple) */
+  --color-primary-10: #f6f2ff;
+  --color-primary-20: #e8daff;
+  --color-primary-30: #d4bbff;
+  --color-primary-40: #be95ff;
+  --color-primary-50: #a56eff;
+  --color-primary-60: #8a3ffc;
+  --color-primary-70: #6929c4;
+  --color-primary-80: #491d8b;
+  --color-primary-90: #31135e;
+  --color-primary-100: #1c0f30;
+
+  /* Neutral */
+  --color-neutral-white: #ffffff;
+  --color-neutral-10: #f4f4f4;
+  --color-neutral-20: #eaeaea;
+  --color-neutral-30: #dbdbdb;
+  --color-neutral-40: #c6c6c6;
+  --color-neutral-50: #8d8d8d;
+  --color-neutral-60: #6f6f6f;
+  --color-neutral-70: #525252;
+  --color-neutral-80: #393939;
+  --color-neutral-90: #262626;
+  --color-neutral-100: #161616;
+  --color-neutral-black: #000000;
+
+  /* Error (Red) */
+  --color-error-10: #fff1f1;
+  --color-error-20: #ffd7d9;
+  --color-error-30: #ffb3b8;
+  --color-error-40: #ff8389;
+  --color-error-50: #fa4d56;
+  --color-error-60: #da1e28;
+  --color-error-70: #a2191f;
+  --color-error-80: #750e13;
+  --color-error-90: #520408;
+  --color-error-100: #2d0709;
+
+  /* Success (Green) */
+  --color-success-10: #defbe6;
+  --color-success-20: #a7f0ba;
+  --color-success-30: #6fdc8c;
+  --color-success-40: #42be65;
+  --color-success-50: #24a148;
+  --color-success-60: #198038;
+  --color-success-70: #0e6027;
+  --color-success-80: #044317;
+  --color-success-90: #022d0d;
+  --color-success-100: #071908;
+
+  /* Warning (Yellow) */
+  --color-warning-10: #fcf4d6;
+  --color-warning-20: #fddc69;
+  --color-warning-30: #f1c21b;
+  --color-warning-40: #d2a106;
+  --color-warning-50: #b28600;
+  --color-warning-60: #8e6a00;
+  --color-warning-70: #684e00;
+  --color-warning-80: #483700;
+  --color-warning-90: #302400;
+  --color-warning-100: #1c1500;
+}
+
+/* ─── Semantic Tokens — Light Mode ─── */
+:root {
+  /* Background */
+  --color-background: var(--color-neutral-white);
+
+  /* Surfaces */
+  --color-surface-primary: var(--color-neutral-10);
+  --color-surface-primary-variant: var(--color-neutral-white);
+  --color-surface-secondary: var(--color-neutral-20);
+  --color-surface-secondary-variant: var(--color-neutral-10);
+  --color-surface-tertiary: var(--color-neutral-30);
+  --color-surface-tertiary-variant: var(--color-neutral-20);
+  --color-surface-inverse: var(--color-neutral-90);
+  --color-surface-elevated: var(--color-neutral-white);
+  --color-surface-brand: var(--color-primary-10);
+  --color-surface-critical: var(--color-error-10);
+  --color-surface-success: var(--color-success-10);
+  --color-surface-warning: var(--color-warning-10);
+
+  /* Fills — Primary */
+  --color-fill-primary: var(--color-neutral-10);
+  --color-fill-primary-hover: var(--color-neutral-20);
+  --color-fill-primary-active: var(--color-neutral-30);
+  --color-fill-primary-disabled: color-mix(in srgb, var(--color-neutral-10) 50%, transparent);
+
+  /* Fills — Primary Variant */
+  --color-fill-primary-variant: var(--color-neutral-white);
+  --color-fill-primary-variant-hover: var(--color-neutral-10);
+  --color-fill-primary-variant-active: var(--color-neutral-20);
+
+  /* Fills — Secondary */
+  --color-fill-secondary: var(--color-neutral-20);
+  --color-fill-secondary-hover: var(--color-neutral-30);
+  --color-fill-secondary-active: var(--color-neutral-40);
+
+  /* Fills — Secondary Variant */
+  --color-fill-secondary-variant: var(--color-neutral-10);
+  --color-fill-secondary-variant-hover: var(--color-neutral-20);
+  --color-fill-secondary-variant-active: var(--color-neutral-30);
+
+  /* Fills — Tertiary */
+  --color-fill-tertiary: var(--color-neutral-30);
+  --color-fill-tertiary-hover: var(--color-neutral-40);
+  --color-fill-tertiary-active: var(--color-neutral-50);
+
+  /* Fills — Tertiary Variant */
+  --color-fill-tertiary-variant: var(--color-neutral-20);
+  --color-fill-tertiary-variant-hover: var(--color-neutral-30);
+  --color-fill-tertiary-variant-active: var(--color-neutral-40);
+
+  /* Fills — Inverse */
+  --color-fill-inverse: var(--color-neutral-90);
+  --color-fill-inverse-hover: var(--color-neutral-80);
+  --color-fill-inverse-active: var(--color-neutral-70);
+
+  /* Fills — Elevated */
+  --color-fill-elevated: var(--color-neutral-white);
+  --color-fill-elevated-hover: var(--color-neutral-10);
+  --color-fill-elevated-active: var(--color-neutral-20);
+
+  /* Fills — Brand */
+  --color-fill-brand: var(--color-primary-60);
+  --color-fill-brand-hover: var(--color-primary-70);
+  --color-fill-brand-active: var(--color-primary-80);
+  --color-fill-brand-disabled: color-mix(in srgb, var(--color-primary-60) 50%, transparent);
+  --color-fill-brand-secondary: color-mix(in srgb, var(--color-primary-50) 15%, transparent);
+  --color-fill-brand-secondary-hover: color-mix(in srgb, var(--color-primary-50) 30%, transparent);
+  --color-fill-brand-secondary-active: color-mix(in srgb, var(--color-primary-60) 30%, transparent);
+
+  /* Fills — Critical */
+  --color-fill-critical: var(--color-error-50);
+  --color-fill-critical-hover: var(--color-error-60);
+  --color-fill-critical-active: var(--color-error-70);
+
+  /* Fills — Success */
+  --color-fill-success: var(--color-success-50);
+  --color-fill-success-hover: var(--color-success-60);
+  --color-fill-success-active: var(--color-success-70);
+
+  /* Fills — Warning */
+  --color-fill-warning: var(--color-warning-50);
+  --color-fill-warning-hover: var(--color-warning-60);
+
+  /* ─── Text Colors ─── */
+  --color-text-primary: var(--color-neutral-100);
+  --color-text-secondary: var(--color-neutral-70);
+  --color-text-tertiary: var(--color-neutral-50);
+  --color-text-placeholder: var(--color-neutral-40);
+  --color-text-disabled: var(--color-neutral-30);
+  --color-text-inverse: var(--color-neutral-white);
+  --color-text-brand: var(--color-primary-60);
+  --color-text-error: var(--color-error-60);
+  --color-text-success: var(--color-success-60);
+  --color-text-warning: var(--color-warning-60);
+  --color-text-on-brand: var(--color-neutral-white);
+  --color-text-on-critical: var(--color-neutral-white);
+
+  /* ─── Border Colors ─── */
+  --color-border-primary: var(--color-neutral-30);
+  --color-border-secondary: var(--color-neutral-20);
+  --color-border-tertiary: var(--color-neutral-10);
+  --color-border-tertiary-hover: var(--color-neutral-20);
+  --color-border-tertiary-disabled: var(--color-neutral-10);
+  --color-border-inverse: var(--color-neutral-90);
+  --color-border-inverse-hover: var(--color-neutral-80);
+  --color-border-inverse-active: var(--color-neutral-70);
+  --color-border-brand: var(--color-primary-60);
+  --color-border-critical: var(--color-error-50);
+  --color-border-error: var(--color-error-50); /* alias → border-critical */
+  --color-border-success: var(--color-success-50);
+  --color-border-warning: var(--color-warning-50);
+  --color-border-focus: var(--color-primary-60);
+  --color-border-disabled: var(--color-neutral-20);
+  --color-border-secondary-disabled: var(--color-neutral-10);
+
+  /* ─── Additional Fills ─── */
+  --color-fill-inverse-disabled: color-mix(in srgb, var(--color-neutral-90) 50%, transparent);
+  --color-fill-inverse-hover: var(--color-neutral-80);
+  --color-fill-tertiary-disabled: color-mix(in srgb, var(--color-neutral-30) 50%, transparent);
+  --color-fill-primary-variant: var(--color-neutral-white);
+  --color-fill-primary-variant-disabled: color-mix(in srgb, var(--color-neutral-white) 50%, transparent);
+
+  /* ─── Overlay ─── */
+  --color-overlay: rgba(0, 0, 0, 0.5);
+
+  /* ─── Text — Disabled ─── */
+  --color-text-primary-disabled: var(--color-neutral-30);
+  --color-text-disabled: var(--color-neutral-30); /* alias → text-primary-disabled */
+
+  /* ─── Typography ─── */
+  --font-family: "Google Sans Flex", system-ui, sans-serif;
+
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+
+  /* Display */
+  --text-display-xs: 48px;
+  --text-display-xs-leading: 56px;
+  --text-display-xs-tracking: -0.48px;
+  --text-display-sm: 60px;
+  --text-display-sm-leading: 72px;
+  --text-display-sm-tracking: -0.6px;
+  --text-display-md: 72px;
+  --text-display-md-leading: 84px;
+  --text-display-md-tracking: -0.72px;
+
+  /* Heading */
+  --text-heading-xs: 20px;
+  --text-heading-xs-leading: 24px;
+  --text-heading-xs-tracking: 0.2px;
+  --text-heading-sm: 24px;
+  --text-heading-sm-leading: 32px;
+  --text-heading-sm-tracking: 0.24px;
+  --text-heading-md: 28px;
+  --text-heading-md-leading: 36px;
+  --text-heading-md-tracking: 0.28px;
+  --text-heading-lg: 32px;
+  --text-heading-lg-leading: 40px;
+  --text-heading-lg-tracking: 0.32px;
+  --text-heading-xl: 36px;
+  --text-heading-xl-leading: 44px;
+  --text-heading-xl-tracking: 0px;
+  --text-heading-2xl: 40px;
+  --text-heading-2xl-leading: 48px;
+  --text-heading-2xl-tracking: 0px;
+
+  /* Body */
+  --text-body-xs: 12px;
+  --text-body-xs-leading: 16px;
+  --text-body-xs-tracking: 0.24px;
+  --text-body-sm: 14px;
+  --text-body-sm-leading: 20px;
+  --text-body-sm-tracking: 0.28px;
+  --text-body-md: 16px;
+  --text-body-md-leading: 24px;
+  --text-body-md-tracking: 0.16px;
+  --text-body-lg: 18px;
+  --text-body-lg-leading: 28px;
+  --text-body-lg-tracking: 0.18px;
+  --text-body-xl: 20px;
+  --text-body-xl-leading: 28px;
+  --text-body-xl-tracking: 0.2px;
+
+  /* Label */
+  --text-label-xs: 11px;
+  --text-label-xs-leading: 16px;
+  --text-label-xs-tracking: 0.33px;
+  --text-label-sm: 12px;
+  --text-label-sm-leading: 16px;
+  --text-label-sm-tracking: 0.36px;
+  --text-label-md: 14px;
+  --text-label-md-leading: 20px;
+  --text-label-md-tracking: 0.42px;
+  --text-label-lg: 16px;
+  --text-label-lg-leading: 20px;
+  --text-label-lg-tracking: 0.32px;
+  --text-label-xl: 18px;
+  --text-label-xl-leading: 24px;
+  --text-label-xl-tracking: 0.36px;
+  --text-label-2xl: 20px;
+  --text-label-2xl-leading: 24px;
+  --text-label-2xl-tracking: 0.4px;
+
+  /* ─── Spacing ─── */
+  --spacing-1: 4px;
+  --spacing-2: 6px;
+  --spacing-3: 8px;
+  --spacing-4: 12px;
+  --spacing-5: 16px;
+  --spacing-6: 20px;
+  --spacing-7: 24px;
+  --spacing-8: 28px;
+  --spacing-9: 32px;
+  --spacing-10: 36px;
+  --spacing-11: 40px;
+  --spacing-12: 48px;
+  --spacing-13: 56px;
+  --spacing-14: 64px;
+  --spacing-15: 72px;
+  --spacing-16: 80px;
+  --spacing-17: 96px;
+  --spacing-18: 120px;
+
+  /* ─── Shadows ─── */
+  --shadow-xs: 0px 2px 4px rgba(176, 175, 175, 0.16);
+  --shadow-sm: 0px 4px 8px rgba(176, 175, 175, 0.20);
+  --shadow-md: 0px 8px 16px rgba(176, 175, 175, 0.22);
+  --shadow-lg: 0px 12px 24px rgba(176, 175, 175, 0.25);
+
+  /* ─── Border Radius ─── */
+  --radius-none: 0px;
+  --radius-1: 2px;
+  --radius-2: 4px;
+  --radius-3: 6px;
+  --radius-4: 8px;
+  --radius-5: 10px;
+  --radius-6: 12px;
+  --radius-7: 14px;
+  --radius-8: 16px;
+  --radius-9: 18px;
+  --radius-10: 20px;
+  --radius-11: 24px;
+  --radius-12: 32px;
+  --radius-full: 9999px;
+
+  /* ─── Border / Stroke Width ─── */
+  --border-1: 0.5px;
+  --border-2: 1px;
+  --border-3: 1.5px;
+  --border-4: 2px;
+  --border-5: 2.5px;
+  --border-6: 4px;
+}
+
+/* ─── Semantic Tokens — Dark Mode ─── */
+.dark {
+  /* Background */
+  --color-background: var(--color-neutral-100);
+
+  /* Surfaces */
+  --color-surface-primary: var(--color-neutral-90);
+  --color-surface-primary-variant: var(--color-neutral-90);
+  --color-surface-secondary: var(--color-neutral-80);
+  --color-surface-secondary-variant: var(--color-neutral-80);
+  --color-surface-tertiary: var(--color-neutral-70);
+  --color-surface-tertiary-variant: var(--color-neutral-70);
+  --color-surface-inverse: var(--color-neutral-10);
+  --color-surface-elevated: var(--color-neutral-80);
+  --color-surface-brand: var(--color-primary-90);
+  --color-surface-critical: var(--color-error-90);
+  --color-surface-success: var(--color-success-90);
+  --color-surface-warning: var(--color-warning-90);
+
+  /* Fills — Primary */
+  --color-fill-primary: var(--color-neutral-90);
+  --color-fill-primary-hover: var(--color-neutral-80);
+  --color-fill-primary-active: var(--color-neutral-70);
+  --color-fill-primary-disabled: color-mix(in srgb, var(--color-neutral-90) 30%, transparent);
+
+  /* Fills — Primary Variant */
+  --color-fill-primary-variant: var(--color-neutral-90);
+  --color-fill-primary-variant-hover: var(--color-neutral-80);
+  --color-fill-primary-variant-active: var(--color-neutral-70);
+
+  /* Fills — Secondary */
+  --color-fill-secondary: var(--color-neutral-80);
+  --color-fill-secondary-hover: var(--color-neutral-70);
+  --color-fill-secondary-active: var(--color-neutral-60);
+
+  /* Fills — Secondary Variant */
+  --color-fill-secondary-variant: var(--color-neutral-80);
+  --color-fill-secondary-variant-hover: var(--color-neutral-70);
+  --color-fill-secondary-variant-active: var(--color-neutral-60);
+
+  /* Fills — Tertiary */
+  --color-fill-tertiary: var(--color-neutral-70);
+  --color-fill-tertiary-hover: var(--color-neutral-60);
+  --color-fill-tertiary-active: var(--color-neutral-50);
+
+  /* Fills — Tertiary Variant */
+  --color-fill-tertiary-variant: var(--color-neutral-70);
+  --color-fill-tertiary-variant-hover: var(--color-neutral-60);
+  --color-fill-tertiary-variant-active: var(--color-neutral-50);
+
+  /* Fills — Inverse */
+  --color-fill-inverse: var(--color-neutral-10);
+  --color-fill-inverse-hover: var(--color-neutral-20);
+  --color-fill-inverse-active: var(--color-neutral-30);
+
+  /* Fills — Elevated */
+  --color-fill-elevated: var(--color-neutral-80);
+  --color-fill-elevated-hover: var(--color-neutral-70);
+  --color-fill-elevated-active: var(--color-neutral-60);
+
+  /* Fills — Brand */
+  --color-fill-brand: var(--color-primary-60);
+  --color-fill-brand-hover: var(--color-primary-50);
+  --color-fill-brand-active: var(--color-primary-40);
+  --color-fill-brand-disabled: color-mix(in srgb, var(--color-primary-60) 30%, transparent);
+  --color-fill-brand-secondary: color-mix(in srgb, var(--color-primary-70) 30%, transparent);
+  --color-fill-brand-secondary-hover: color-mix(in srgb, var(--color-primary-70) 50%, transparent);
+  --color-fill-brand-secondary-active: color-mix(in srgb, var(--color-primary-60) 50%, transparent);
+
+  /* Fills — Critical */
+  --color-fill-critical: var(--color-error-50);
+  --color-fill-critical-hover: var(--color-error-40);
+  --color-fill-critical-active: var(--color-error-30);
+
+  /* Fills — Success */
+  --color-fill-success: var(--color-success-50);
+  --color-fill-success-hover: var(--color-success-40);
+  --color-fill-success-active: var(--color-success-30);
+
+  /* Fills — Warning */
+  --color-fill-warning: var(--color-warning-50);
+  --color-fill-warning-hover: var(--color-warning-40);
+
+  /* Text Colors */
+  --color-text-primary: var(--color-neutral-white);
+  --color-text-secondary: var(--color-neutral-40);
+  --color-text-tertiary: var(--color-neutral-50);
+  --color-text-placeholder: var(--color-neutral-60);
+  --color-text-disabled: var(--color-neutral-70);
+  --color-text-inverse: var(--color-neutral-100);
+  --color-text-brand: var(--color-primary-40);
+  --color-text-error: var(--color-error-40);
+  --color-text-success: var(--color-success-40);
+  --color-text-warning: var(--color-warning-30);
+  --color-text-on-brand: var(--color-neutral-white);
+  --color-text-on-critical: var(--color-neutral-white);
+
+  /* Border Colors */
+  --color-border-primary: var(--color-neutral-70);
+  --color-border-secondary: var(--color-neutral-80);
+  --color-border-tertiary: var(--color-neutral-90);
+  --color-border-tertiary-hover: var(--color-neutral-80);
+  --color-border-tertiary-disabled: var(--color-neutral-90);
+  --color-border-inverse: var(--color-neutral-10);
+  --color-border-inverse-hover: var(--color-neutral-20);
+  --color-border-inverse-active: var(--color-neutral-30);
+  --color-border-brand: var(--color-primary-50);
+  --color-border-critical: var(--color-error-50);
+  --color-border-error: var(--color-error-50); /* alias → border-critical */
+  --color-border-success: var(--color-success-50);
+  --color-border-warning: var(--color-warning-40);
+  --color-border-focus: var(--color-primary-40);
+  --color-border-disabled: var(--color-neutral-80);
+  --color-border-secondary-disabled: var(--color-neutral-90);
+
+  /* Additional Fills */
+  --color-fill-inverse-disabled: color-mix(in srgb, var(--color-neutral-10) 30%, transparent);
+  --color-fill-inverse-hover: var(--color-neutral-20);
+  --color-fill-tertiary-disabled: color-mix(in srgb, var(--color-neutral-70) 50%, transparent);
+  --color-fill-primary-variant: var(--color-neutral-90);
+  --color-fill-primary-variant-disabled: color-mix(in srgb, var(--color-neutral-90) 50%, transparent);
+
+  /* Overlay */
+  --color-overlay: rgba(0, 0, 0, 0.7);
+
+  /* Text — Disabled */
+  --color-text-primary-disabled: var(--color-neutral-70);
+  --color-text-disabled: var(--color-neutral-70); /* alias → text-primary-disabled */
+}
