@@ -327,55 +327,68 @@
   --border-6: 4px;
 }
 
+/* ─── Dark Mode Neutral Scale (v2 Figma spec) ─── */
+/* These match Imagine ONE Workspace Figma (node 22577:56954) dark-mode
+ * primitives, which are darker/lower-contrast than the generic neutral-*
+ * scale above. Used only from the .dark semantic token assignments below. */
+.dark {
+  --color-dark-0: #0f0f0f;   /* background */
+  --color-dark-1: #171717;   /* surface-primary */
+  --color-dark-2: #212121;   /* surface-secondary-variant, border-primary */
+  --color-dark-3: #2e2e2e;   /* border-secondary, fill-tertiary */
+  --color-dark-4: #3d3d3d;   /* border-tertiary */
+  --color-dark-content-secondary: #bdbdbd;
+}
+
 /* ─── Semantic Tokens — Dark Mode ─── */
 .dark {
   /* Background */
-  --color-background: var(--color-neutral-100);
+  --color-background: var(--color-dark-0);
 
   /* Surfaces */
-  --color-surface-primary: var(--color-neutral-90);
-  --color-surface-primary-variant: var(--color-neutral-90);
-  --color-surface-secondary: var(--color-neutral-80);
-  --color-surface-secondary-variant: var(--color-neutral-80);
-  --color-surface-tertiary: var(--color-neutral-70);
-  --color-surface-tertiary-variant: var(--color-neutral-70);
+  --color-surface-primary: var(--color-dark-1);
+  --color-surface-primary-variant: var(--color-dark-1);
+  --color-surface-secondary: var(--color-dark-2);
+  --color-surface-secondary-variant: var(--color-dark-2);
+  --color-surface-tertiary: var(--color-dark-3);
+  --color-surface-tertiary-variant: var(--color-dark-3);
   --color-surface-inverse: var(--color-neutral-10);
-  --color-surface-elevated: var(--color-neutral-80);
+  --color-surface-elevated: var(--color-dark-2);
   --color-surface-brand: var(--color-primary-90);
   --color-surface-critical: var(--color-error-90);
   --color-surface-success: var(--color-success-90);
   --color-surface-warning: var(--color-warning-90);
 
   /* Fills — Primary */
-  --color-fill-primary: var(--color-neutral-90);
-  --color-fill-primary-hover: var(--color-neutral-80);
-  --color-fill-primary-active: var(--color-neutral-70);
-  --color-fill-primary-disabled: color-mix(in srgb, var(--color-neutral-90) 30%, transparent);
+  --color-fill-primary: var(--color-dark-1);
+  --color-fill-primary-hover: var(--color-dark-2);
+  --color-fill-primary-active: var(--color-dark-3);
+  --color-fill-primary-disabled: color-mix(in srgb, var(--color-dark-1) 30%, transparent);
 
   /* Fills — Primary Variant */
-  --color-fill-primary-variant: var(--color-neutral-90);
-  --color-fill-primary-variant-hover: var(--color-neutral-80);
-  --color-fill-primary-variant-active: var(--color-neutral-70);
+  --color-fill-primary-variant: var(--color-dark-1);
+  --color-fill-primary-variant-hover: var(--color-dark-2);
+  --color-fill-primary-variant-active: var(--color-dark-3);
 
   /* Fills — Secondary */
-  --color-fill-secondary: var(--color-neutral-80);
-  --color-fill-secondary-hover: var(--color-neutral-70);
-  --color-fill-secondary-active: var(--color-neutral-60);
+  --color-fill-secondary: var(--color-dark-2);
+  --color-fill-secondary-hover: var(--color-dark-3);
+  --color-fill-secondary-active: var(--color-dark-4);
 
   /* Fills — Secondary Variant */
-  --color-fill-secondary-variant: var(--color-neutral-80);
-  --color-fill-secondary-variant-hover: var(--color-neutral-70);
-  --color-fill-secondary-variant-active: var(--color-neutral-60);
+  --color-fill-secondary-variant: var(--color-dark-2);
+  --color-fill-secondary-variant-hover: var(--color-dark-3);
+  --color-fill-secondary-variant-active: var(--color-dark-4);
 
   /* Fills — Tertiary */
-  --color-fill-tertiary: var(--color-neutral-70);
-  --color-fill-tertiary-hover: var(--color-neutral-60);
-  --color-fill-tertiary-active: var(--color-neutral-50);
+  --color-fill-tertiary: var(--color-dark-3);
+  --color-fill-tertiary-hover: var(--color-dark-4);
+  --color-fill-tertiary-active: var(--color-neutral-60);
 
   /* Fills — Tertiary Variant */
-  --color-fill-tertiary-variant: var(--color-neutral-70);
-  --color-fill-tertiary-variant-hover: var(--color-neutral-60);
-  --color-fill-tertiary-variant-active: var(--color-neutral-50);
+  --color-fill-tertiary-variant: var(--color-dark-3);
+  --color-fill-tertiary-variant-hover: var(--color-dark-4);
+  --color-fill-tertiary-variant-active: var(--color-neutral-60);
 
   /* Fills — Inverse */
   --color-fill-inverse: var(--color-neutral-10);
@@ -383,9 +396,9 @@
   --color-fill-inverse-active: var(--color-neutral-30);
 
   /* Fills — Elevated */
-  --color-fill-elevated: var(--color-neutral-80);
-  --color-fill-elevated-hover: var(--color-neutral-70);
-  --color-fill-elevated-active: var(--color-neutral-60);
+  --color-fill-elevated: var(--color-dark-2);
+  --color-fill-elevated-hover: var(--color-dark-3);
+  --color-fill-elevated-active: var(--color-dark-4);
 
   /* Fills — Brand */
   --color-fill-brand: var(--color-primary-60);
@@ -412,9 +425,9 @@
 
   /* Text Colors */
   --color-text-primary: var(--color-neutral-white);
-  --color-text-secondary: var(--color-neutral-40);
-  --color-text-tertiary: var(--color-neutral-50);
-  --color-text-placeholder: var(--color-neutral-60);
+  --color-text-secondary: var(--color-dark-content-secondary);
+  --color-text-tertiary: rgba(255, 255, 255, 0.5);
+  --color-text-placeholder: rgba(255, 255, 255, 0.4);
   --color-text-disabled: var(--color-neutral-70);
   --color-text-inverse: var(--color-neutral-100);
   --color-text-brand: var(--color-primary-40);
@@ -425,11 +438,11 @@
   --color-text-on-critical: var(--color-neutral-white);
 
   /* Border Colors */
-  --color-border-primary: var(--color-neutral-70);
-  --color-border-secondary: var(--color-neutral-80);
-  --color-border-tertiary: var(--color-neutral-90);
-  --color-border-tertiary-hover: var(--color-neutral-80);
-  --color-border-tertiary-disabled: var(--color-neutral-90);
+  --color-border-primary: var(--color-dark-2);
+  --color-border-secondary: var(--color-dark-3);
+  --color-border-tertiary: var(--color-dark-4);
+  --color-border-tertiary-hover: var(--color-dark-3);
+  --color-border-tertiary-disabled: var(--color-dark-2);
   --color-border-inverse: var(--color-neutral-10);
   --color-border-inverse-hover: var(--color-neutral-20);
   --color-border-inverse-active: var(--color-neutral-30);

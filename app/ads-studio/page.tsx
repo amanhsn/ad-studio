@@ -1,76 +1,48 @@
-"use client";
-
-import Image from "next/image";
-import { TopNav } from "@/components/ui/top-nav";
-import { SideNav, type SideNavItem } from "@/components/ui/side-nav";
-import {
-  Home,
-  Image as ImageIcon,
-  Video,
-  Folder,
-  Setting,
-} from "react-iconly";
-import { PainterlyBackdrop } from "@/components/ads-studio/painterly-backdrop";
-import { HeroBlock } from "@/components/ads-studio/hero-block";
-import { ReferenceTilesRow } from "@/components/ads-studio/reference-tiles-row";
-import { PromptComposer } from "@/components/ads-studio/prompt-composer";
-import { ProjectRail } from "@/components/ads-studio/project-rail";
-import { InspirationsGrid } from "@/components/ads-studio/inspirations-grid";
-
-const SIDE_NAV_ITEMS: SideNavItem[] = [
-  { label: "Home", href: "/", icon: <Home set="light" size="small" /> },
-  {
-    label: "Ads Studio",
-    href: "/ads-studio",
-    icon: <ImageIcon set="light" size="small" />,
-    active: true,
-  },
-  { label: "Director", href: "#", icon: <Video set="light" size="small" /> },
-  { label: "Projects", href: "#", icon: <Folder set="light" size="small" /> },
-  { label: "Settings", href: "#", icon: <Setting set="light" size="small" /> },
-];
+import { TopBar } from "@/components/ads-studio/v2/top-bar";
+import { SideRail } from "@/components/ads-studio/v2/side-rail";
+import { TopGlow } from "@/components/ads-studio/v2/top-glow";
+import { Hero } from "@/components/ads-studio/v2/hero";
+import { FilterTabs } from "@/components/ads-studio/v2/filter-tabs";
+import { SearchBar } from "@/components/ads-studio/v2/search-bar";
+import { InspirationsGrid } from "@/components/ads-studio/v2/inspirations-grid";
+import { ComposerCluster } from "@/components/ads-studio/v2/composer-cluster";
+import { AssetsDock } from "@/components/ads-studio/v2/assets-dock";
 
 export default function AdsStudioPage() {
   return (
-    <>
-      <TopNav
-        brand={
-          <Image
-            src="/brand/logo-color.png"
-            alt="Imagine"
-            width={28}
-            height={28}
-            priority
-          />
-        }
-        items={[]}
-      />
+    <div className="dark h-screen flex flex-col bg-background text-content-primary overflow-hidden">
+      <TopBar />
       <div className="flex flex-1 min-h-0">
-        <SideNav collapsed items={SIDE_NAV_ITEMS} />
+        <SideRail />
 
-        {/* Central column */}
-        <main className="relative flex-1 overflow-hidden">
-          <PainterlyBackdrop />
+        <main className="relative flex-1 min-w-0 overflow-hidden">
+          <TopGlow variant="home" />
 
-          {/* Scrollable foreground */}
-          <div className="relative z-10 h-full overflow-y-auto">
-            <div className="max-w-[640px] mx-auto px-4 pt-12 flex flex-col gap-6">
-              <HeroBlock />
-              <div className="flex flex-col gap-3">
-                <ReferenceTilesRow />
-                <PromptComposer />
+          <div className="relative h-full overflow-y-auto">
+            <div className="relative mx-auto max-w-[1300px] pr-[76px] pl-6">
+              <div className="pt-6">
+                <Hero />
+              </div>
+              <div className="pt-14 flex flex-col gap-3">
+                <FilterTabs />
+                <SearchBar />
+              </div>
+              <div className="pt-5">
+                <InspirationsGrid />
               </div>
             </div>
-
-            <div className="mt-12 px-6 pb-12">
-              <InspirationsGrid />
-            </div>
+            <div className="h-[220px]" aria-hidden />
           </div>
 
-          {/* Project rail — floats at right edge of central column */}
-          <ProjectRail className="absolute right-3 top-7 z-20" />
+          <AssetsDock className="absolute right-2 top-[48%] -translate-y-1/2 z-20" />
+
+          <div className="absolute left-0 right-[76px] bottom-5 z-30 px-6">
+            <div className="max-w-[972px] mx-auto">
+              <ComposerCluster />
+            </div>
+          </div>
         </main>
       </div>
-    </>
+    </div>
   );
 }

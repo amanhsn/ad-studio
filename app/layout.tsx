@@ -15,7 +15,7 @@ export default function RootLayout({
     <html lang="en" className="h-full antialiased">
       <head>
         <link
-          href="https://fonts.googleapis.com/css2?family=Google+Sans+Flex:wght@400;500;600;700&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Google+Sans+Flex:wght@400;500;600;700&family=Monomaniac+One&display=swap"
           rel="stylesheet"
         />
       </head>
